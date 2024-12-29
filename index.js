@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 const upload = multer({ storage: multer.memoryStorage() });
 
 // POST endpoint for file upload
-app.post('/api/filemetadata', upload.single('upfile'), (req, res) => {
+app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: 'No file uploaded' });
   }
